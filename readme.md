@@ -38,8 +38,6 @@
 <p>In this section we will see the time it took for the program to complete computing for the Daxpy. We will conduct 30 test runs for each size before we compute for the average run time. The value of A will be set to two for all test runs.</p>
 
 **Vector Size: 2^20**
-| Size : 2^20        | A: 2          |
-|:-------------------|:--------------:|
 | **Test no:**       | asm time      | SIMD time     |
 |:------------------:|:-------------:|:-------------:|
 | 1                  | 22            | 33            |
