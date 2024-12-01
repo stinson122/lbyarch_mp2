@@ -148,7 +148,7 @@
 - **Average ASM Time**: 0.00323 seconds
 - **Average C Time**: 0.00287 seconds
 - **Performance Comparison**:  
-  The C kernel demonstrates slightly faster execution compared to the ASM kernel. On average, C outperforms ASM by about **0.00036 seconds**, making it a better option for smaller vector sizes. This suggests that C’s parallel processing capabilities provide a slight advantage over the scalar approach in the given range.
+  The C kernel demonstrates slightly faster execution compared to the ASM kernel. On average, C outperforms ASM by about **0.00036 seconds**, making it a better option for smaller vector sizes. This suggests that CÂ’s parallel processing capabilities provide a slight advantage over the scalar approach in the given range.
 
 ### Vector Size: 2^24
 
@@ -164,6 +164,6 @@
 - **Performance Comparison**:  
   For vector size 2^29, the **ASM kernel performs significantly faster** than the C kernel, with an average time difference of approximately **20.37 seconds**. This indicates that for larger vector sizes, C may not always be more efficient and could incur additional overhead due to its parallel processing nature. The scalar approach (ASM) is more efficient at handling larger data in this case.
 ***
-[Click me for video demo!](https://www.example.com/article)
+[Click me for video demo!]([https://www.example.com/article](https://drive.google.com/file/d/1CuY-Gxv6iPpd-i07MLN3UYOumUeLCS0S/view?usp=sharing))
 
 
