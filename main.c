@@ -24,7 +24,7 @@ void daxpy_C(int n, double A, double* X, double* Y, double* Z) {
 
 int main() {
     int n, i;
-    int sizes[] = {1 << 20};
+    int sizes[] = {1 << 20, 1 << 24, 1 << 29};
     double A, *X, *Y, *Z;
     clock_t start_time, end_time;
     double cpu_time_used;
