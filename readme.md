@@ -12,4 +12,4 @@
 <p>The user must input the corresponding letter for the size of the vector. If the user entered a character not recognized by the porgram, it will automatically set the size of the vector to 2^20 as seen in the image below.</p>
 
 **Image of the size selection:**
-![Logo](./images/LabMp1.png)
+![Logo](Images/LabMp1.png)
