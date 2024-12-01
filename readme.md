@@ -147,3 +147,20 @@
 - **Average SIMD Time**: 0.00287 seconds
 - **Performance Comparison**:  
   The SIMD kernel demonstrates slightly faster execution compared to the ASM kernel. On average, SIMD outperforms ASM by about **0.00036 seconds**, making it a better option for smaller vector sizes. This suggests that SIMD’s parallel processing capabilities provide a slight advantage over the scalar approach in the given range.
+
+### Vector Size: 2^24
+
+- **Average ASM Time**: 0.0416 seconds
+- **Average SIMD Time**: 0.0416 seconds
+- **Performance Comparison**:  
+  For vector size 2^24, both the ASM and SIMD kernels exhibit nearly identical execution times, with an average difference of **0.0000 seconds**. This suggests that for medium-sized vectors, the parallel processing capabilities of SIMD do not provide a significant advantage over the scalar approach, and both methods perform similarly in this range.
+
+### Vector Size: 2^29
+
+- **Average ASM Time**: 37.5612 seconds
+- **Average SIMD Time**: 57.9301 seconds
+- **Performance Comparison**:  
+  For vector size 2^29, the **ASM kernel performs significantly faster** than the SIMD kernel, with an average time difference of approximately **20.37 seconds**. This indicates that for larger vector sizes, SIMD may not always be more efficient and could incur additional overhead due to its parallel processing nature. The scalar approach (ASM) is more efficient at handling larger data in this case.
+***
+[Click me for video demo!](https://www.example.com/article)
+
