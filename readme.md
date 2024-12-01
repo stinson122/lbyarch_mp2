@@ -7,3 +7,4 @@
 <p>3. gcc -o main.exe main.obj daxpy.obj -mconsole</p>
 <p>4. main.exe</p>
 ***
+<p>When the you have excecuted the exe file it will first ask you to choose the size of the vector, the sizes being 2^20, 2^24 and 2^29.</p>
