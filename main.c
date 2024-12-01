@@ -68,26 +68,26 @@ int main() {
     daxpy(n, A, X, Y, Z);
     end_time = clock();
     cpu_time_used = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
-    printf("\nExecution time for DAXPY (ASM): %.6lf seconds\n", cpu_time_used);
+    printf("\nExecution time for DAXPY using SIMD registers in ASM: %.6lf seconds\n", cpu_time_used);
 
 	//Print out 1st 10 elems of all vectors
 	printf("\nA: %.1lf", A);
     printf("\nX: ");
     for (i = 0; i < 10; i++) {
-        printf("%10.2lf ", X[i]);
+        printf("%10.1lf ", X[i]);
     }
     printf("\n");
     
     printf("\nY: ");
     for (i = 0; i < 10; i++) {
-        printf("%10.2lf ", Y[i]);
+        printf("%10.1lf ", Y[i]);
     }
     printf("\n");
 
-    printf("\nCompute DAXPY (A*X+Y):");
+    printf("\nDAXPY (A*X+Y) using SIMD registers in ASM:");
     printf("\nZ:");
     for (i = 0; i < 10; i++) {
-        printf("%10.2lf ", Z[i]);
+        printf("%10.1lf ", Z[i]);
     }
     printf("\n\n");
     
@@ -100,7 +100,7 @@ int main() {
     printf("\nDAXPY using SIMD instructions in C:");
     printf("\nZ:");
     for (i = 0; i < 10; i++) {
-        printf("%10.2lf ", Z[i]);
+        printf("%10.1lf ", Z[i]);
     }
     printf("\n");
 

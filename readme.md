@@ -1,7 +1,9 @@
-## LBARCHY - Grp 6
+## LBYARCH - Grp 6
 **Daxpy in C and x86**
+<p>Members: GUTIERREZ, ALLEN ANDREI DAGLE and STINSON, AUDREY LAUREN GARCIA</p>
+
 ***
-<p>To run the prorgam in cmd, input the following text in cmd:</p>
+<p>To run the program, open main.exe or input the following text in cmd:</p>
 <p>1. nasm -f win64 daxpy.asm</p>
 <p>2. gcc -c main.c -o main.obj -m64 -mavx </p>
 <p>3. gcc -o main.exe main.obj daxpy.obj -mconsole</p>
@@ -9,7 +11,7 @@
 
 ***
 <p>When you have excecuted the exe file it will first ask you to choose the size of the vector, the sizes being 2^20, 2^24 and 2^29.</p>
-<p>The user must input the corresponding letter for the size of the vector. If the user entered a character not recognized by the porgram, it will automatically set the size of the vector to 2^20 as seen in the image below.</p>
+<p>The user must input the corresponding letter for the size of the vector. If the user entered an invalid input, it will automatically set the size of the vector to 2^20 as seen in the image below.</p>
 
 **Image of the size selection:**
 ![Logo](Images/MPpic1.png)
@@ -17,12 +19,12 @@
 
 ![Logo](Images/MPpic2.png)
 ***
-<p>After selecting the size of the vector it will then ask you for a number. That number will be the one used as the value for the variable A. The entered value cannot be 1, if the value 1 is entered as the input the program will say it can't be 1 and loop back to ask for a new input.</p>
+<p>After selecting the size of the vector it will then ask you for a number. That number will be the one used as the value for the variable A. The entered value cannot be 1. If the value 1 is entered as the input, the program will say it can't be 1 and loop back to ask for a new input.</p>
 
 **Image of User input for A:**
 ![Logo](Images/MPpic3.png)
 ***
-<p>With the value for A already set the program will now begin. It will print out the first 10 elements of all vectors of the Daxpy Operation done by assembly at the same time caluculation its execution. After that it will print out the Daxpy done by the SIMD instructions in C to visibly check if the outputs of the assembly is correct.</p>
+<p>Now the program will execute the Daxpy Operation done in assembly, calculate and print out the execution time, and then print out the first 10 elements of all vectors. After that, it will execute and print out the Daxpy done using SIMD instructions in C to visibly check if the outputs of the assembly are correct.</p>
 
 **Sample runs of different vector Sizes:**
 
@@ -32,10 +34,10 @@
 
 ***
 **Run time Results**
-<p>In this section we will see the time it took for the program to complete computing for the Daxpy. We will conduct 30 test runs for each size before we compute for the average run time. The value of A will be set to two for all test runs.</p>
+<p>In this section we will see the time it took for the program to complete computing for the Daxpy. We will conduct 30 test runs for each size before we compute for the average run time.</p>
 
 **Vector Size: 2^20**
-| Test no:           | asm time in Seconds: | SIMD time in Seconds: |
+| Test no:           | asm time in Seconds: | C time in Seconds: |
 |:------------------:|:--------------------:|:---------------------:|
 | 1                  | 0.003000             | 0.001000              |
 | 2                  | 0.001000             | 0.001000              |
@@ -70,7 +72,7 @@
 | **Avg Time**           | **0.00323**                   | **0.00287**                    |
 
 **Vector Size: 2^24**
-| Test no:           | asm time in Seconds: | SIMD time in Seconds: |
+| Test no:           | asm time in Seconds: | C time in Seconds: |
 |:------------------:|:--------------------:|:---------------------:|
 | 1                  | 0.057000             | 0.042000              |
 | 2                  | 0.039000             | 0.041000              |
@@ -105,7 +107,7 @@
 | **Avg Time**           | **0.0416**                   | **0.0416**                    |
 
 **Vector Size: 2^29**
-| Test no:           | asm time in Seconds: | SIMD time in Seconds: |
+| Test no:           | asm time in Seconds: | C time in Seconds: |
 |:------------------:|:--------------------:|:---------------------:|
 | 1                  | 42.041000                     | 57.148000                       |
 | 2                  | 42.940000                     | 59.400000                       |
@@ -144,23 +146,24 @@
 ### Vector Size: 2^20
 
 - **Average ASM Time**: 0.00323 seconds
-- **Average SIMD Time**: 0.00287 seconds
+- **Average C Time**: 0.00287 seconds
 - **Performance Comparison**:  
-  The SIMD kernel demonstrates slightly faster execution compared to the ASM kernel. On average, SIMD outperforms ASM by about **0.00036 seconds**, making it a better option for smaller vector sizes. This suggests that SIMDâ€™s parallel processing capabilities provide a slight advantage over the scalar approach in the given range.
+  The C kernel demonstrates slightly faster execution compared to the ASM kernel. On average, C outperforms ASM by about **0.00036 seconds**, making it a better option for smaller vector sizes. This suggests that C’s parallel processing capabilities provide a slight advantage over the scalar approach in the given range.
 
 ### Vector Size: 2^24
 
 - **Average ASM Time**: 0.0416 seconds
-- **Average SIMD Time**: 0.0416 seconds
+- **Average C Time**: 0.0416 seconds
 - **Performance Comparison**:  
-  For vector size 2^24, both the ASM and SIMD kernels exhibit nearly identical execution times, with an average difference of **0.0000 seconds**. This suggests that for medium-sized vectors, the parallel processing capabilities of SIMD do not provide a significant advantage over the scalar approach, and both methods perform similarly in this range.
+  For vector size 2^24, both the ASM and C kernels exhibit nearly identical execution times, with an average difference of **0.0000 seconds**. This suggests that for medium-sized vectors, the parallel processing capabilities of C do not provide a significant advantage over the scalar approach, and both methods perform similarly in this range.
 
 ### Vector Size: 2^29
 
 - **Average ASM Time**: 37.5612 seconds
-- **Average SIMD Time**: 57.9301 seconds
+- **Average C Time**: 57.9301 seconds
 - **Performance Comparison**:  
-  For vector size 2^29, the **ASM kernel performs significantly faster** than the SIMD kernel, with an average time difference of approximately **20.37 seconds**. This indicates that for larger vector sizes, SIMD may not always be more efficient and could incur additional overhead due to its parallel processing nature. The scalar approach (ASM) is more efficient at handling larger data in this case.
+  For vector size 2^29, the **ASM kernel performs significantly faster** than the C kernel, with an average time difference of approximately **20.37 seconds**. This indicates that for larger vector sizes, C may not always be more efficient and could incur additional overhead due to its parallel processing nature. The scalar approach (ASM) is more efficient at handling larger data in this case.
 ***
 [Click me for video demo!](https://www.example.com/article)
+
 
