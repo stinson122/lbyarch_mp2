@@ -10,4 +10,5 @@
 ***
 <p>When you have excecuted the exe file it will first ask you to choose the size of the vector, the sizes being 2^20, 2^24 and 2^29.</p>
 <p>The user must input the corresponding letter for the size of the vector. If the user entered a character not recognized by the porgram, it will automatically set the size of the vector to 2^20 as seen in the image below.</p>
-**Images of the size selection:**
+
+**Image of the size selection:**
