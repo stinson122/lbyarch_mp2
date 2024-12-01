@@ -100,7 +100,7 @@ int main() {
     printf("\nDAXPY using SIMD instructions in C:");
     printf("\nZ:");
     for (i = 0; i < 10; i++) {
-        printf("%10.1lf ", Z[i]);
+        printf("%10.2lf ", Z[i]);
     }
     printf("\n");
 
