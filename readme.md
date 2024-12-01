@@ -27,7 +27,7 @@
 ***
 <p>With the value for A already set the program will now begin. It will print out the first 10 elements of all vectors of the Daxpy Operation done by assembly at the same time caluculation its execution. After that it will print out the Daxpy done by the SIMD instructions in C to visibly check if the outputs of the assembly is correct.</p>
 
-**Sample runs of different vector Sizes: **
+**Sample runs of different vector Sizes:**
 
 ![Logo](Images/MPpic1.png)
 ![Logo](Images/MPpic1.png)
@@ -38,8 +38,7 @@
 <p>In this section we will see the time it took for the program to complete computing for the Daxpy. We will conduct 30 test runs for each size before we compute for the average run time. The value of A will be set to two for all test runs.</p>
 
 **Vector Size: 2^20**
-| **Test no:**       | asm time      | SIMD time     |
-|:------------------:|:-------------:|:-------------:|
-| 1                  | 22            | 33            |
-| 2                  | 20            | 30            |
-| 3                  | 21            | 32            |
+| Test no:           | asm time in Seconds: | SIMD time in Seconds: |
+|:------------------:|:--------------------:|:---------------------:|
+| 1                  | 22                   | 33                    |
+| 1                  | 22                   | 33                    |
