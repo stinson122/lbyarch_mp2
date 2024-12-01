@@ -47,7 +47,13 @@ int main() {
             break;
     }
 
-    A = 2.0; //change later
+    do {
+        printf("Enter a value for A (cannot be 1): ");
+        scanf("%lf", &A);
+        if (A == 1) {
+            printf("A cannot be 1. Please enter a different value.\n");
+        }
+    } while (A == 1);
 
 	//initialize X,Y,Z
     X = (double *)malloc(n * sizeof(double));
